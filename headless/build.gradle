@@ -1,0 +1,13 @@
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = 'com.c2v4.pumman.headless.HeadlessLauncher'
+eclipse.project.name = appName + '-headless'
+
+dependencies {
+  compile project(':core')
+  compile "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
+  compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+  compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+  compile "com.kotcrab.vis.vis-usl:$uslVersion"
+}
